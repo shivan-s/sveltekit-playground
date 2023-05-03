@@ -32,5 +32,6 @@ export const actions = {
 
 export async function load(event: PageServerLoadEvent) {
   console.log(event)
+  await delayedFunction("test")
   return { data }
 }

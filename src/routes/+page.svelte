@@ -13,7 +13,7 @@
 <div class="message">
     <div class="message-header">Input here</div>
     <div class="message-body">
-        <form method="POST">
+        <form method="POST" action="/?default">
             <div class="field">
                 <label for="input">Input</label>
                 <div class="control">
