@@ -39,16 +39,17 @@
 				<div class="field">
 					<label for="input">Input</label>
 					<div class="control">
-						<input
-							value={form?.input ?? ''}
-							name="input"
-							class="input {form?.error?.input && 'is-danger'}"
-							placeholder="..."
-						/>
+						<!-- <input -->
+						<!-- 	value={form?.input ?? ''} -->
+						<!-- 	name="input" -->
+						<!-- 	class="input {form?.error?.input && 'is-danger'}" -->
+						<!-- 	placeholder="..." -->
+						<!-- /> -->
+						<input value={form?.input ?? ''} name="input" class="input" placeholder="..." />
 					</div>
-					{#if form?.error?.input}
-						<div class="text-small has-text-danger">Error: {form?.error?.input}</div>
-					{/if}
+					<!-- {#if form?.error?.input} -->
+					<!-- 	<div class="text-small has-text-danger">Error: {form?.error?.input}</div> -->
+					<!-- {/if} -->
 				</div>
 				<div class="control">
 					<button disabled={loading} class="button {loading && 'is-loading'}">Submit</button>
@@ -71,9 +72,7 @@
 			<div class="message-header">Output</div>
 			<div class="message-body">
 				<p>Some error occurred:</p>
-				<ul>
-					{form?.error?.input && form?.error?.input}
-				</ul>
+				<pre>{form.error}</pre>
 			</div>
 		</article>
 	{/if}
